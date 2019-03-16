@@ -4,18 +4,12 @@
 #
 Name     : R-BradleyTerry2
 Version  : 1.0.9
-Release  : 6
+Release  : 7
 URL      : https://cran.r-project.org/src/contrib/BradleyTerry2_1.0-9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/BradleyTerry2_1.0-9.tar.gz
 Summary  : Bradley-Terry Models
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-brglm
-Requires: R-gnm
-Requires: R-gtools
-Requires: R-lme4
-Requires: R-prefmod
-Requires: R-qvcalc
 BuildRequires : R-brglm
 BuildRequires : R-gnm
 BuildRequires : R-gtools
@@ -40,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551128645
+export SOURCE_DATE_EPOCH=1552722410
 
 %install
-export SOURCE_DATE_EPOCH=1551128645
+export SOURCE_DATE_EPOCH=1552722410
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -79,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library BradleyTerry2|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  BradleyTerry2 || :
 
 
 %files
@@ -116,3 +109,17 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/BradleyTerry2/help/paths.rds
 /usr/lib64/R/library/BradleyTerry2/html/00Index.html
 /usr/lib64/R/library/BradleyTerry2/html/R.css
+/usr/lib64/R/library/BradleyTerry2/tests/BTabilities.R
+/usr/lib64/R/library/BradleyTerry2/tests/BTabilities.Rout.save
+/usr/lib64/R/library/BradleyTerry2/tests/add1.R
+/usr/lib64/R/library/BradleyTerry2/tests/add1.Rout.save
+/usr/lib64/R/library/BradleyTerry2/tests/baseball.R
+/usr/lib64/R/library/BradleyTerry2/tests/baseball.Rout.save
+/usr/lib64/R/library/BradleyTerry2/tests/countsToBinomial.R
+/usr/lib64/R/library/BradleyTerry2/tests/countsToBinomial.Rout.save
+/usr/lib64/R/library/BradleyTerry2/tests/flatlizards.R
+/usr/lib64/R/library/BradleyTerry2/tests/flatlizards.Rout.save
+/usr/lib64/R/library/BradleyTerry2/tests/nested.R
+/usr/lib64/R/library/BradleyTerry2/tests/nested.Rout.save
+/usr/lib64/R/library/BradleyTerry2/tests/predict.R
+/usr/lib64/R/library/BradleyTerry2/tests/predict.Rout.save
