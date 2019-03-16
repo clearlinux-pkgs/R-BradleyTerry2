@@ -4,7 +4,7 @@
 #
 Name     : R-BradleyTerry2
 Version  : 1.0.9
-Release  : 7
+Release  : 8
 URL      : https://cran.r-project.org/src/contrib/BradleyTerry2_1.0-9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/BradleyTerry2_1.0-9.tar.gz
 Summary  : Bradley-Terry Models
@@ -34,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552722410
+export SOURCE_DATE_EPOCH=1552722596
 
 %install
-export SOURCE_DATE_EPOCH=1552722410
+export SOURCE_DATE_EPOCH=1552722596
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
