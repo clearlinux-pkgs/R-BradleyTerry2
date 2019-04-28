@@ -4,18 +4,24 @@
 #
 Name     : R-BradleyTerry2
 Version  : 1.0.9
-Release  : 12
+Release  : 13
 URL      : https://cran.r-project.org/src/contrib/BradleyTerry2_1.0-9.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/BradleyTerry2_1.0-9.tar.gz
 Summary  : Bradley-Terry Models
 Group    : Development/Tools
 License  : GPL-2.0+
+Requires: R-minqa
+Requires: R-nloptr
+Requires: R-relimp
 BuildRequires : R-brglm
 BuildRequires : R-gnm
 BuildRequires : R-gtools
 BuildRequires : R-lme4
+BuildRequires : R-minqa
+BuildRequires : R-nloptr
 BuildRequires : R-prefmod
 BuildRequires : R-qvcalc
+BuildRequires : R-relimp
 BuildRequires : buildreq-R
 
 %description
@@ -34,10 +40,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552722596
+export SOURCE_DATE_EPOCH=1556465862
 
 %install
-export SOURCE_DATE_EPOCH=1552722596
+export SOURCE_DATE_EPOCH=1556465862
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -73,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  BradleyTerry2 || :
+R CMD check --no-manual --no-examples --no-codoc BradleyTerry2 || :
 
 
 %files
