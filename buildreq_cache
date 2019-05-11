@@ -1,6 +1,7 @@
-1.0.9
+1.1.0
 R-Rcpp
 R-brglm
+R-colorspace
 R-gnm
 R-gtools
 R-lme4
