@@ -4,23 +4,16 @@
 #
 Name     : R-BradleyTerry2
 Version  : 1.1.0
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/BradleyTerry2_1.1-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/BradleyTerry2_1.1-0.tar.gz
 Summary  : Bradley-Terry Models
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Rcpp
 Requires: R-brglm
-Requires: R-colorspace
-Requires: R-gnm
 Requires: R-gtools
 Requires: R-lme4
-Requires: R-minqa
-Requires: R-nloptr
-Requires: R-prefmod
 Requires: R-qvcalc
-Requires: R-relimp
 BuildRequires : R-Rcpp
 BuildRequires : R-brglm
 BuildRequires : R-colorspace
@@ -33,6 +26,7 @@ BuildRequires : R-prefmod
 BuildRequires : R-qvcalc
 BuildRequires : R-relimp
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 # BradleyTerry2
@@ -49,13 +43,13 @@ Status](https://ci.appveyor.com/api/projects/status/github/hturner/BradleyTerry2
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1557587336
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1571805335
 
 %install
-export SOURCE_DATE_EPOCH=1557587336
+export SOURCE_DATE_EPOCH=1571805335
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -84,7 +78,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
