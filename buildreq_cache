@@ -1,13 +1,3 @@
-1.1.0
-R-Rcpp
-R-brglm
-R-colorspace
+1.1.2
 R-gnm
-R-gtools
-R-lme4
-R-minqa
-R-nloptr
 R-prefmod
-R-qvcalc
-R-relimp
-util-linux
