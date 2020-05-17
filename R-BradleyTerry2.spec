@@ -4,7 +4,7 @@
 #
 Name     : R-BradleyTerry2
 Version  : 1.1.2
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/BradleyTerry2_1.1-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/BradleyTerry2_1.1-2.tar.gz
 Summary  : Bradley-Terry Models
@@ -34,21 +34,22 @@ Status](https://ci.appveyor.com/api/projects/status/github/hturner/BradleyTerry2
 
 %prep
 %setup -q -c -n BradleyTerry2
+cd %{_builddir}/BradleyTerry2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1580749407
+export SOURCE_DATE_EPOCH=1589757359
 
 %install
-export SOURCE_DATE_EPOCH=1580749407
+export SOURCE_DATE_EPOCH=1589757359
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
