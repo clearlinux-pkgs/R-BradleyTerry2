@@ -4,7 +4,7 @@
 #
 Name     : R-BradleyTerry2
 Version  : 1.1.2
-Release  : 26
+Release  : 27
 URL      : https://cran.r-project.org/src/contrib/BradleyTerry2_1.1-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/BradleyTerry2_1.1-2.tar.gz
 Summary  : Bradley-Terry Models
